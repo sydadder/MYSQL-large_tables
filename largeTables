@@ -1,0 +1,91 @@
+ SELECT table_schema as `Database`, table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`  FROM information_schema.TABLES  ORDER BY (data_length + index_length) DESC;
++------------------------+---------------------------------------------------------+------------+
+| Database               | Table                                                   | Size in MB |
++------------------------+---------------------------------------------------------+------------+
+| pentaho_stage          | agg_stg_weblog_events_matchhit                          |  821827.32 |
+| pentaho_stage          | agg_date_gvid_man_dist_loc_old                          |  436589.10 |
+| pentaho_stage          | agg_stg_weblog_events_matchhit_gvid                     |  424923.18 |
+| pentaho_stage          | stg_weblog_events_matchmiss                             |  192904.03 |
+| pentaho_stage          | agg_stg_weblog_events_matchmiss                         |  160194.59 |
+| pentaho_stage          | f_inpages                                               |   95298.75 |
+| pentaho_stage          | agg_stg_weblog_events_matchhit_device                   |   90249.00 |
+| pentaho_stage          | f_impressions_interactions                              |   75246.02 |
+| pentaho_stage          | stg_weblog_events                                       |   69653.27 |
+| sio_feeds_limited      | sio_feeds_mapped                                        |   61613.89 |
+| pentaho_stage          | fact_stg_product_attach                                 |   57603.15 |
+| pentaho_stage          | agg_stg_weblog_assets                                   |   49065.46 |
+| pentaho_stage          | fact_weblog_events_ab                                   |   43709.91 |
+| pentaho_stage          | f_minisite_impressions                                  |   25030.91 |
+| pentaho_stage          | f_minisites_impr_interactions                           |   23365.22 |
+| pentaho_stage          | f_brandstores_events_w_prices                           |   23155.40 |
+| pentaho_stage          | agg_stg_date_hotspots                                   |   22470.27 |
+| pentaho_stage          | agg_date_gvid_matchmiss                                 |   22283.57 |
+| pentaho_stage          | a_imp_inter_date_dist_man_prod_oem                      |   16907.22 |
+| pentaho_stage          | a_imp_inter_month_dist_man_prod_oem_osb_loc             |   15469.86 |
+| pentaho_stage          | a_imp_inter_inpages_date_dist_man_prod                  |   14985.15 |
+| pentaho_stage          | a_imp_inter_month_dist_man_prod_oem_osb_url             |   14565.67 |
+| pentaho_stage          | a_imp_inter_date_dist_man_prod                          |   14547.70 |
+| pentaho_stage          | a_imp_inter_month_dist_man_prod_oem_osb_ss              |   13862.72 |
+| pentaho_stage          | a_m_imp_inter_date_dist_man_prod_oem                    |   13464.16 |
+| pentaho_stage          | stg_weblog_viewtimes                                    |   13385.92 |
+| pentaho_stage          | agg_date_product_attach                                 |   10856.97 |
+| pentaho_stage          | stg_traffic_sources                                     |    9877.68 |
+| pentaho_stage          | agg_stg_weblog_events_ab_device                         |    9732.53 |
+| pentaho_stage          | a_imp_inter_date_dist_man_prod_oem_osb_loc              |    9661.29 |
+| pentaho_stage          | a_imp_inter_date_dist_man_prod_oem_osb_url              |    9475.46 |
+| pentaho_stage          | a_imp_inter_date_dist_man_prod_oem_osb_ss               |    9200.49 |
+| pentaho_stage          | a_m_imp_inter_date_dist_man_prod_loc_url                |    9143.03 |
+| pentaho_stage          | stg_weblog_events_test                                  |    8366.33 |
+| pentaho_stage          | agg_stg_video                                           |    7184.70 |
+| pentaho_stage          | agg_stg_weblog_events_ab                                |    6405.38 |
+| pentaho_stage          | a_m_imp_inter_date_dist_man_oem_ss_url                  |    6256.25 |
+| pentaho_stage          | a_i_imp_inter_date_dist_man_prod_loc_url                |    5764.16 |
+| pentaho_stage          | f_minisite_tabhits                                      |    5692.67 |
+
+
+SELECT table_schema as `Database`, table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`  FROM information_schema.TABLES  ORDER BY (data_length + index_length) DESC;
++---------------------------+----------------------------------------------------+------------+
+| Database                  | Table                                              | Size in MB |
++---------------------------+----------------------------------------------------+------------+
+| flixcar                   | asset_feature                                      |   96079.66 |
+| flixcar                   | asset                                              |   91561.72 |
+| flixcar                   | asset_language                                     |   82426.94 |
+| flixcar_import            | feed_review                                        |   62911.75 |
+| flixcar                   | asset_specification                                |   46493.89 |
+| flixcar                   | product_asset                                      |   40684.61 |
+| flixcar_import            | hp_specification                                   |   40182.94 |
+| flixcar                   | file                                               |   39109.34 |
+| flixcar                   | product_accessory_new                              |   31381.59 |
+| flixcar_import            | feed_queue_product                                 |   28176.69 |
+| flixcar                   | asset_feature_file                                 |   25596.78 |
+| distributor_sio           | distributor_feed_backup                            |   20690.66 |
+| distributor_sio           | distributor_feed                                   |   20686.75 |
+| flixcar_import            | feed_queue                                         |   18546.00 |
+| distributor               | distributor_feed                                   |   13531.55 |
+| flixcar_import            | default_specification                              |   13360.98 |
+| flixcar_import            | default_missing_ean_mpn                            |   10508.00 |
+| distributor_sio           | distributor_match                                  |    9497.72 |
+| flixcar                   | product_asset_mobile                               |    9366.78 |
+| flixcar                   | product_accessory                                  |    8455.00 |
+| flixcar                   | asset_rich                                         |    6199.03 |
+| flixcar_import            | feed_queue_product_version                         |    6119.27 |
+| flixcar                   | product_asset_extrainfo                            |    5241.00 |
+| flixcar                   | asset_image                                        |    4296.34 |
+| flixfacts                 | tag_name                                           |    3524.81 |
+| flixfacts                 | prod_cont_text                                     |    3377.55 |
+| distributor               | distributor_feed_manual                            |    3018.81 |
+| flixcar_import            | cron_log                                           |    2596.52 |
+| bespoke                   | cloud_audit                                        |    2584.97 |
+| flixfacts                 | click_tabs                                         |    2578.89 |
+| flixcar                   | file_image                                         |    2457.80 |
+| flixcar                   | product_title                                      |    2216.23 |
+| flixcar                   | product_category                                   |    1900.73 |
+| flixfacts                 | click_tabs_tmp                                     |    1588.95 |
+| bespoke                   | cloud_audit_old                                    |    1503.00 |
+| flixcar                   | product_indexing_data                              |    1321.02 |
+| distributor               | distributor_feed_mpn                               |    1287.72 |
+| flixcar                   | _ile__mage                                         |    1122.84 |
+| flixfacts                 | prod_cont_image                                    |    1112.59 |
+| flixcar_import            | feed_queue_product_asset                           |    1094.44 |
+| distributor               | distributor_feed_upc                               |    1079.66 |
+| flixfacts                 | click                                              |    1025.98 |
